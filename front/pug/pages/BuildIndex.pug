@@ -1,18 +1,21 @@
 //- a(href="https://tds.favbet.partners").main-link
 .land
   .land__container
-    //- .land__logo
-    //-     img(src="./img/logo_favbet.svg" alt="favbet")
-    //-     h2.land__logo-title Бери від гри своє
-    
-    //- .land__title Бонус*
-    
-    //- .land__bonus-container
-    //-   .land__price 15 000 ₴
-    //-   .land__plus
-    //-   .land__spins 300 fs
-
-    //- a(href="https://tds.favbet.partners").land__btn почни гру
+    img.land__logo(src="./img/logo.svg" alt="favbet logo")
+    h1.land__title ВІТАЛЬНИЙ БОНУС*
+    .land__bonus
+      .land__price 225 000 ₴
+      .land__plus
+      .land__spins 300 fs
+    a(href="https://tds.favbet.partners").land__btn Забрати бонус
+  
+  .land__players
+    picture
+      source(media="(min-width: 600px) and (min-height: 501px) and (orientation: landscape)" srcset="img/players-desk.png")
+      source(media="(min-width: 601px) and (max-width: 1300px) and (orientation: portrait)" srcset="img/players-tab.png")
+      source(media="(max-width: 500px) and (orientation: portrait)" srcset="img/players-mob.png")
+      source(media="(max-width: 950px) and (orientation: landscape) and (max-height: 500px)" srcset="img/players-mob.png")
+      img(src="img/players-desk.png" alt="players")
 
   p.land__text
     | * Під бонусом розуміється можливість отримати приз в рамках акції «Вітальний бонус». 

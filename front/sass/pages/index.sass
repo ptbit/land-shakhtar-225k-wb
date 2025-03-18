@@ -3,17 +3,17 @@ $white: #ffffff
 $grey: #EDEDED
 $magenta: #FF267E
 $green: #05C48A
-$black: #1B1B1F
+$bg-color: #35399c
 
-$font-suisse-intl-reg: SuisseIntl-Regular, sans-serif
-$font-suisse-intl-medium: SuisseIntl-Medium, sans-serif
-$font-suisse-intl-semibold: SuisseIntl-SemiBold, sans-serif
+$font-suisse-intl-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisse-intl-medium: SuisseIntl-Medium, sans-serif //500
+$font-suisse-intl-semibold: SuisseIntl-SemiBold, sans-serif //600
 
 $font-legal: DINPro-CondLight, sans-serif
 
 body
   overscroll-behavior: none
-  background-color: #3f261f
+  background-color: $bg-color
   img
     max-width: 100%
     height: auto
@@ -22,6 +22,7 @@ body
   width: 100%
   height: 100%
   z-index: 9
+
 .land
   height: calc(100% - 83px)
   position: relative
@@ -40,11 +41,12 @@ body
 
   &::before
     content: ""
-    width: 66%
-    height: 100%
+    z-index: 1
+    width: 100%
+    height: 100px
     position: absolute
-    background: linear-gradient(270deg, rgba(14, 15, 12, 0.00) 0%, rgba(14, 15, 12, 0.60) 53.96%)
-  
+    bottom: 0
+    background: linear-gradient(180deg, rgba(0, 0, 85, 0.00) 0%, #005 100%)
 
   &__container
     display: flex
@@ -53,78 +55,68 @@ body
     align-items: center
     position: relative
     width: fit-content 
-    margin-left: 73px
+    margin-left: 40px
+    margin-top: 40px
     height: 100%
     color: $grey
-    font-size: 66px
     text-transform: uppercase
-    font-weight: 500
-
+    padding-left: 160px
+    width: 710px
   &__logo
-    max-width: 514px
-    display: flex
-    flex-direction: column
-    gap: 20px
-    &-title
-      font-size: 49px
-      font-weight: 500 
-      letter-spacing: 0.49px
-      font-family: $font-suisse-intl-medium
+    width: 457px
+    position: absolute
+    left: 0
+    top: 0
 
   &__title
-    margin-top: 100px
-    text-shadow: 0px 1.388px 0px #000
-    line-height: 38px
-    letter-spacing: 0.66px
+    margin-bottom: 18px
+    align-self: flex-start
+    font-size: 54px
+    line-height: 64px
+    letter-spacing: 0.51px
     font-family: $font-suisse-intl-medium
+    font-weight: 500
+    color: $grey
+    font-style: normal
+    text-transform: uppercase
  
-  &__bonus-container
+  &__bonus
+    margin-bottom: 50px
     display: flex
+    flex-direction: column
     width: 100%
-    min-width: 840px
-    margin-top: 30px
     position: relative
-
+    font-size: 70px
   &__price
     padding: 20px 10px 10px
-    width: 50%
-    background-color: $blue
+    background-color: $magenta
     color: $grey
     text-align: center
-    font-style: normal
-    font-weight: 500
+    font-size: 70px
     letter-spacing: 2.64px
-    text-wrap: nowrap
     text-transform: uppercase
     font-family: $font-suisse-intl-medium
     &::before
       content: "до"
-      margin-right: 5px
+      margin-right: 15px
       color: $grey
-      font-size: 26px
+      font-size: 54px
       font-style: normal
       font-weight: 500
-      line-height: normal
-      letter-spacing: 1.04px
-      text-transform: uppercase
+      line-height: 64.7px
+      letter-spacing: 0.54px
+      text-transform: lowercase
       font-family: $font-suisse-intl-medium
-
   &__plus
-    width: 47px
-    height: 41px
-    background-image: url("../img/plus.png")
-    background-size: contain
-    background-repeat: no-repeat
-    background-position: center
     position: absolute
     top: 50%
-    left: 50%
+    left: 0%
     transform: translate(-50%, -50%)
-
+    width: 62px
+    height: 53px
+    background: url("../img/plus.svg") no-repeat 50% 50%/contain
   &__spins
     padding: 20px 10px 10px
-    width: 50%
-    background-color: #FF267E
     color: $grey
     text-align: center
     font-style: normal
@@ -132,37 +124,46 @@ body
     letter-spacing: 2.64px
     text-transform: uppercase
     font-family: $font-suisse-intl-medium
+    background-color: $blue
+
   &__btn
     pointer-events: initial
-    margin-top: 70px
     border-radius: 4px
     background: $green
-    padding: 31px 115px 27px // !!!4
+    padding: 37px 74px 29px
+    height: 116px
+    width: 100%
     color: #005
     text-align: center
     font-family: $font-suisse-intl-semibold
-    font-size: 24px
-    letter-spacing: 1.92px
+    font-size: 34px
+    letter-spacing: 2.72px
     transition: background-color .3s ease
     &:hover
       background: #37d0a1
 
   &__text
+    z-index: 1
     position: absolute
     bottom: 18px
-    left: 35px
-    max-width: 716px
+    left: 37px
     font-family: $font-suisse-intl-reg
     font-size: 14px
     line-height: 22px
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
-    color: white
+    color: $white
+    opacity: 0.8
 
   &__link
     text-decoration-line: underline
     color: white
 
-  /////
+  &__players
+    position: absolute
+    right: 47px
+    bottom: -206px
+    width: 1080px
+    // height: 983px
 
 .footer
   background: $blue
@@ -208,7 +209,12 @@ body
 
 .legal
   font-family: $font-legal
-  font-size: 4.7vw
-  padding: 0 15px
+  // font-size: 4.7vw
+  // padding: 0 15px
   text-align: center
-  background-color: #fff
+  background-color: $white
+
+  font-size: 81px
+  padding: 9px 15px
+  letter-spacing: 2px
+  line-height: 1
