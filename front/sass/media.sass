@@ -20,6 +20,10 @@
     &__container
       padding-left: 140px
       width: 690px
+      transform: scale(0.9)
+      transform-origin: left top
+    &__title
+      margin-top: 100px
     &__players
       width: 1000px
       right: 30px
@@ -35,12 +39,12 @@
 @media screen and (max-width: 1707px) and (max-height: 910px)
   .land
     &__container
-      transform: scale(0.85)
+      transform: scale(0.8)
       transform-origin: left top
       padding-left: 150px
       width: 700px
     &__title
-      margin-top: 140px
+      margin-top: 180px
     &__players
       width: 1000px
       right: 0
@@ -51,7 +55,7 @@
 @media screen and (max-width: 1680px) and (max-height: 1050px)
   .land
     &__container
-      transform: scale(0.85)
+      transform: scale(0.8)
       transform-origin: left top
       padding-left: 150px
       width: 700px
@@ -63,12 +67,12 @@
 @media screen and (max-width: 1600px) and (max-height: 900px)
   .land
     &__container
-      transform: scale(0.8)
+      transform: scale(0.75)
       transform-origin: left top
       padding-left: 130px
       width: 680px
     &__title
-      margin-top: 190px
+      margin-top: 230px
     &__players
       width: 950px
       right: 0
@@ -87,11 +91,11 @@
 @media screen and (max-width: 1536px) and (max-height: 864px)
   .land
     &__container
-      transform: scale(0.85)
+      transform: scale(0.8)
       padding-left: 60px
       width: 610px
     &__title
-      margin-top: 60px
+      margin-top: 140px
     &__players
       right: -10px
 @media screen and (max-width: 1536px) and (max-height: 770px)
@@ -108,11 +112,11 @@
 @media screen and (max-width: 1512px) and (max-height: 870px)
   .land
     &__container
-      transform: scale(0.7)
+      transform: scale(0.65)
       padding-left: 130px
       width: 680px
     &__title
-      margin-top: 220px
+      margin-top: 270px
 @media screen and (max-width: 1470px) and (max-height: 675px)
   .land
     &__container
@@ -130,11 +134,11 @@
 @media screen and (max-width: 1440px) and (max-height: 900px)
   .land
     &__container
-      transform: scale(0.8)
+      transform: scale(0.7)
       padding-left: 50px
       width: 600px
     &__title
-      margin-top: 150px
+      margin-top: 210px
     &__players
       width: 930px
       right: 0
@@ -151,12 +155,12 @@
 @media screen and (max-width: 1380px) and (max-height: 960px)
   .land
     &__container
-      transform: scale(0.78)
+      transform: scale(0.73)
       transform-origin: left top
       padding-left: 50px
       width: 600px
     &__title
-      margin-top: 180px
+      margin-top: 210px
     &__players
       width: 860px
       bottom: -100px
@@ -199,10 +203,10 @@
 @media screen and (max-width: 1368px) and (max-height: 1030px)
   .land
     &__container
-      transform: scale(0.8)
+      transform: scale(0.75)
       transform-origin: top left
-      padding-left: 30px
-      width: 580px
+      padding-left: 50px
+      width: 600px
     &__title
       margin-top: 200px
     &__players
@@ -365,7 +369,7 @@
       margin-top: 230px
     &__players
       width: 640px
-      bottom: -50px
+      bottom: 0
       right: -10px
     // &__text
     //   bottom: 0
@@ -389,12 +393,13 @@
 @media screen and (max-width: 1045px) and (max-height: 840px)
   .land
     &__container
-      transform: scale(0.65)
+      transform: scale(0.6)
       padding-left: 30px
       width: 580px
     &__title
-      margin-top: 280px
+      margin-top: 320px
     &__players
+      bottom: 0
       width: 600px
       right: -10px
 @media screen and (max-width: 1024px) and (max-height: 670px)
@@ -405,6 +410,10 @@
       margin-top: 330px
     &__players
       bottom: -100px
+@media screen and (max-width: 1010px) and (max-height: 810px)
+  .land
+    &__players
+      bottom: 0
 @media screen and (max-width: 977px) and (max-height: 810px)
   .land
     &__container
@@ -675,6 +684,7 @@
       margin-top: 500px
     &__players
       width: 390px
+      bottom: -50px
 @media screen and (max-width: 667px) and (max-height: 375px) and (orientation: landscape)
   .land
     &__container
@@ -695,6 +705,10 @@
       right: 0px
       bottom: -110px
       width: 390px
+@media screen and (max-height: 650px) and (orientation: landscape)
+  .land
+    &::before
+      height: 15%
 @media screen and (max-width: 640px) and (max-height: 360px) and (orientation: landscape)
   .land
     &__container
@@ -732,6 +746,7 @@
     &__players
       width: 330px
       right: -10px
+      bottom: -30px
 // **************************************************************************************************************************
 // **************************************************************************************************************************
 // **************************************************************************************************************************
@@ -893,7 +908,7 @@
   .land
     &__players
       width: 95%
-      // bottom: -160px
+      bottom: -170px
 @media screen and (max-width: 755px) and (max-height: 1040px) and (orientation: portrait)
   .land
     &__players
@@ -956,7 +971,22 @@
       bottom: -190px
     &__text
       font-size: 10px
-
+@media screen and (max-width: 660px) and (max-height: 710px) and (min-height: 660px) and (orientation: portrait)
+  .land
+    &__logo, &__title, &__bonus
+      transform: scale(0.7)
+      transform-origin: top
+    &__logo
+      margin-bottom: 0
+    &__btn
+      transform: scale(0.7)
+      transform-origin: bottom
+      margin-bottom: 40px
+    &__title
+      line-height: 42px
+    &__text
+      line-height: 1.2
+      bottom: 5px
 @media screen and (max-width: 650px) and (max-height: 710px) and (min-height: 600px) and (orientation: portrait)
   .land
     &__players
@@ -1088,11 +1118,17 @@
       margin-bottom: 20px
     &__players
       transform: scale(1.2)
-      bottom: 20px
+      bottom: 60px
 @media screen and (max-width: 430px) and (max-height: 800px) and (orientation: portrait)
   .land
     &__logo
       margin-top: 0
+@media screen and (max-width: 420px) and (max-height: 720px) and (orientation: portrait)
+  .land
+    &__players
+      bottom: 0
+    &__text
+      line-height: 13px
 @media screen and (max-width: 399px) and (max-height: 670px) and (orientation: portrait)
   .land
     &__players
@@ -1100,6 +1136,10 @@
       bottom: 10px
     &__btn
       margin-bottom: 77px
+@media screen and (max-width: 385px) and (max-height: 720px) and (orientation: portrait)
+  .land
+    &__players
+      bottom: 40px
 @media screen and (max-width: 375px) and (max-height: 670px) and (orientation: portrait)
   .land
     &__logo
@@ -1151,6 +1191,13 @@
       margin-top: 0
     &__title
       font-size: 26px
+@media screen and (max-width: 337px) and (max-height: 750px) and (orientation: portrait)
+  .land
+    &__btn
+      margin-bottom: 75px
+    &__players
+      bottom: 50px
+
 @media screen and (max-width: 332px) and (max-height: 810px) and (min-height: 800px) and (orientation: portrait)
   .land
     &__btn
