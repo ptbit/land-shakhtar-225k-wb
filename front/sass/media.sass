@@ -689,7 +689,17 @@
   .land
     &__players
       bottom: -80px
-@media screen and (max-width: 820px) and (max-height: 1020px) and (min-height: 970px) and (orientation: portrait)
+@media screen and (max-width: 840px) and (max-height: 1150px) and (min-height: 1051px) and (orientation: portrait)
+  .land
+    &__logo, &__title, &__bonus
+      transform: scale(1)
+      transform-origin: top
+      margin-top: 0px
+    &__btn
+      transform: scale(1)
+    &__players
+      bottom: -100px
+@media screen and (max-width: 840px) and (max-height: 1050px) and (min-height: 970px) and (orientation: portrait)
   .land
     &__logo, &__title, &__bonus
       transform: scale(1)
@@ -956,7 +966,7 @@
       margin-top: 0
     &__title
       font-size: 26px
-@media screen and (max-width: 332px) and  (max-height: 810px) and (min-height: 800px) and (orientation: portrait)
+@media screen and (max-width: 332px) and (max-height: 810px) and (min-height: 800px) and (orientation: portrait)
   .land
     &__btn
       margin-bottom: 85px
@@ -975,3 +985,13 @@
   .land
     &__title
       font-size: 24px
+@media screen and (max-width: 300px) and (orientation: portrait)
+  .land
+    &__title
+      font-size: 22px
+@media screen and (max-width: 290px) and (max-height: 830px) and (min-height: 800px)and (orientation: portrait)
+  .land
+    &__logo
+      margin-top: 50px
+    &__bonus
+      margin-top: 30px
