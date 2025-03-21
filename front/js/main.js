@@ -58,10 +58,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   let price = document.querySelector('.land__price');
   let spins = document.querySelector('.land__spins');
+  let btn = document.querySelector('.land__btn');
 
   if (!/iPad|iPhone|iPod|Mac/.test(navigator.userAgent)) {
     console.log('ADD CLASS no iOS');
     price.classList.add('noios-padding');
     spins.classList.add('noios-padding');
+    btn.classList.add('noios-padding');
   }
 });
