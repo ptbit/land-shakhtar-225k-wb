@@ -53,3 +53,15 @@
       }
   });
 })();
+
+// padding no-ios
+document.addEventListener('DOMContentLoaded', function () {
+  let price = document.querySelector('.land__price');
+  let spins = document.querySelector('.land__spins');
+
+  if (!/iPad|iPhone|iPod|Mac/.test(navigator.userAgent)) {
+    console.log('ADD CLASS no iOS');
+    price.classList.add('noios-padding');
+    spins.classList.add('noios-padding');
+  }
+});
